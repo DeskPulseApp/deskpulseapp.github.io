@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DeskPulse · Move Break Reminder</title>
+<meta name="description" content="DeskPulse reminds you to get up from your desk, guides short exercises, and keeps your streak going. Made for people who sit all day at work.">
+<style>
+  :root { --bg: #0b0b0b; --card: #161616; --text: #f2f2f2; --sub: #a8a8a8; --line: #2a2a2a; --accent: #ff5722; --lime: #d4f25c; }
+  @media (prefers-color-scheme: light) { :root:not([data-theme="dark"]) { --bg: #fafafa; --card: #ffffff; --text: #161616; --sub: #555; --line: #e4e4e4; --lime: #5a7a00; } }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans Arabic", sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
+  header { display: flex; align-items: center; gap: 14px; }
+  .logo { width: 56px; height: 56px; border-radius: 14px; background: var(--accent); display: grid; place-items: center; color: #fff; font-weight: 800; font-size: 26px; flex: none; }
+  h1 { font-size: 30px; margin: 0; line-height: 1.15; }
+  .tag { color: var(--sub); margin: 2px 0 0; }
+  .hero { font-size: 21px; line-height: 1.45; margin: 28px 0 8px; font-weight: 600; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin: 24px 0; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; }
+  .card h2 { font-size: 17px; margin: 0 0 4px; }
+  .card p { margin: 0; color: var(--sub); font-size: 15px; }
+  .pro { border-color: var(--accent); }
+  .pro h2 span { font-size: 11px; font-weight: 800; background: var(--accent); color: #1a0a04; padding: 2px 7px; border-radius: 6px; margin-inline-start: 6px; vertical-align: middle; }
+  .status { display: inline-block; font-weight: 700; color: var(--lime); }
+  footer { margin-top: 40px; padding-top: 18px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 8px 20px; font-size: 15px; }
+  a { color: var(--accent); }
+  .lang { display: flex; gap: 8px; margin: 18px 0 0; }
+  .lang button { background: var(--card); color: var(--text); border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; font: inherit; font-size: 14px; cursor: pointer; min-height: 36px; }
+  .lang button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="logo" aria-hidden="true">D</div>
+    <div><h1>DeskPulse</h1><p class="tag" id="tag">Move Break Reminder</p></div>
+  </header>
+  <div class="lang" role="group" aria-label="Language">
+    <button type="button" data-lang="en" aria-pressed="true">English</button>
+    <button type="button" data-lang="ar" aria-pressed="false">العربية</button>
+  </div>
+
+  <article id="en" lang="en" dir="ltr">
+    <p class="hero">Sitting all day at work? DeskPulse reminds you to get up, shows you short exercises you can do at your desk, and keeps your streak going.</p>
+    <div class="grid">
+      <div class="card"><h2>Smart break reminders</h2><p>Reminds you during your work hours, and skips the reminder if you just walked.</p></div>
+      <div class="card"><h2>Desk exercises</h2><p>Short, guided stretches and moves you can do next to your desk.</p></div>
+      <div class="card"><h2>Streaks, XP and badges</h2><p>Earn XP for every break, keep your streak, and collect badges.</p></div>
+      <div class="card"><h2>Meet Pulse</h2><p>Your little desk buddy, who cheers you on and can be dressed up your way.</p></div>
+      <div class="card"><h2>Home-screen widgets</h2><p>See today's progress and log a break without opening the app.</p></div>
+      <div class="card pro"><h2>DeskPulse Pro <span>PRO</span></h2><p>Relief programs, Streak Shields, the sitting report, Pulse's room and more. One payment, no subscription.</p></div>
+    </div>
+    <p><span class="status">Now in testing on Google Play.</span> English and Arabic.</p>
+    <footer>
+      <a href="/privacy/">Privacy policy</a>
+      <a href="mailto:deskpulse.assistant@outlook.com">Contact: deskpulse.assistant@outlook.com</a>
+    </footer>
+  </article>
+
+  <article id="ar" lang="ar" dir="rtl" hidden>
+    <p class="hero">قاعد طول اليوم في الشغل؟ DeskPulse بيفكرك تقوم تتحرك، ويوريك تمارين قصيرة تعملها جنب مكتبك، ويحافظ على الستريك بتاعك.</p>
+    <div class="grid">
+      <div class="card"><h2>تذكير ذكي بالاستراحة</h2><p>بيفكرك في ساعات شغلك، ومش بيفكرك لو لسه ماشي.</p></div>
+      <div class="card"><h2>تمارين المكتب</h2><p>تمارين وإطالات قصيرة بخطوات واضحة تعملها جنب مكتبك.</p></div>
+      <div class="card"><h2>ستريك و XP وشارات</h2><p>اكسب XP مع كل استراحة، حافظ على الستريك، واجمع الشارات.</p></div>
+      <div class="card"><h2>اتعرّف على بولس</h2><p>صاحبك الصغير على المكتب، بيشجعك وتقدر تلبّسه على ذوقك.</p></div>
+      <div class="card"><h2>ودجت الشاشة الرئيسية</h2><p>شوف تقدمك النهارده وسجّل استراحة من غير ما تفتح التطبيق.</p></div>
+      <div class="card pro"><h2>DeskPulse Pro <span>PRO</span></h2><p>برامج الراحة، دروع الستريك، تقرير القعدة، أوضة بولس وحاجات تانية. تدفع مرة واحدة، من غير اشتراك.</p></div>
+    </div>
+    <p><span class="status">دلوقتي في مرحلة التجربة على Google Play.</span> بالعربي والإنجليزي.</p>
+    <footer>
+      <a href="/privacy/#ar">سياسة الخصوصية</a>
+      <a href="mailto:deskpulse.assistant@outlook.com">للتواصل: deskpulse.assistant@outlook.com</a>
+    </footer>
+  </article>
+</main>
+<script>
+  const tags = { en: 'Move Break Reminder', ar: 'تذكير بالحركة والاستراحة' };
+  function show(l) {
+    for (const k of ['en', 'ar']) document.getElementById(k).hidden = k !== l;
+    document.querySelectorAll('[data-lang]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.lang === l)));
+    document.documentElement.lang = l; document.documentElement.dir = l === 'ar' ? 'rtl' : 'ltr';
+    document.getElementById('tag').textContent = tags[l];
+  }
+  document.querySelectorAll('[data-lang]').forEach(b => b.addEventListener('click', () => { show(b.dataset.lang); history.replaceState(null, '', '#' + b.dataset.lang); }));
+  show(location.hash === '#ar' || (!location.hash && (navigator.language || '').startsWith('ar')) ? 'ar' : 'en');
+</script>
+</body>
+</html>
